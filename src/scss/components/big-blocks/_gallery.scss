@@ -1,0 +1,157 @@
+.gallery {
+
+  &__item {
+    display: flex;
+    height: 646px;
+    cursor: pointer;
+
+    @include media-max(1024) {
+      flex-direction: column;
+      height: auto;
+    }
+
+
+    img {
+      object-fit: cover;
+    }
+
+    &:first-child .gallery-left {
+      width: 50%;
+      @include media-max(1024) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+
+      }
+    }
+
+    &:first-child .gallery-right {
+      width: 50%;
+      @include media-max(1024) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+
+      }
+    }
+
+    &:nth-child(2) .gallery-left {
+      width: 50%;
+      @include media-max(1024) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 101%;
+      }
+    }
+
+    &:nth-child(2) .gallery-right {
+      width: 50%;
+      @include media-max(1024) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+
+    &:nth-child(3) .gallery-left {
+      width: 50%;
+      @include media-max(1024) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 101%;
+      }
+    }
+
+    &:nth-child(3) .gallery-right {
+      width: 50%;
+      @include media-max(1024) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+
+    &:nth-child(4) .gallery-left {
+      width: 50%;
+      @include media-max(1024) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 101%;
+      }
+    }
+
+    &:nth-child(4) .gallery-right {
+      width: 50%;
+
+      @include media-max(1024) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+
+    &:nth-child(5) .gallery-left {
+      width: 50%;
+      @include media-max(1024) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+
+      }
+    }
+
+    &:nth-child(5) .gallery-right {
+      width: 50%;
+      @include media-max(1024) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+
+      }
+    }
+  }
+}
+
+.gallery-right,.gallery-left {
+  @include media-max(1024) {
+    margin-top: -10px;
+  }
+}

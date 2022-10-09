@@ -1,0 +1,62 @@
+.price__block {
+  max-width: 240px;
+  width: 100%;
+  margin-top: 25px;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    padding-bottom: 5px;
+  }
+
+  .old__price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-decoration-line: line-through;
+    color: #333333;
+  }
+
+  .price__title {
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 50px;
+    color: #035063;
+  }
+
+  .price__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    opacity: 0.75;
+    padding-top: 8px;
+  }
+
+  .price__discount {
+    position: relative;
+    width: 56px;
+    height: 29px;
+    background: #FF7512;
+    border-radius: 4.99724px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+      position: absolute;
+      content: url("../img/mini.png");
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      top: 7px;
+      left: -6px;
+
+    }
+  }
+}

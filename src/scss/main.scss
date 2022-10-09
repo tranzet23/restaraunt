@@ -1,0 +1,33 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// small blocks
+@import "components/small-blocks/btn";
+@import "components/small-blocks/modal";
+@import "components/small-blocks/validate";
+@import "components/small-blocks/price";
+@import "components/small-blocks/dropdown";
+@import "components/small-blocks/burger";
+@import "components/small-blocks/counter";
+@import "components/small-blocks/tool";
+
+
+// Big blocks
+@import "components/big-blocks/header";
+@import "components/big-blocks/hero";
+@import "components/big-blocks/menu-list";
+@import "components/big-blocks/kitchen_menu";
+@import "components/big-blocks/ordering";
+@import "components/big-blocks/gallery";
+@import "components/big-blocks/order-form";
+
+
+
+@import "components/big-blocks/footer";
+
+
+
+
+@import "block/*.scss";

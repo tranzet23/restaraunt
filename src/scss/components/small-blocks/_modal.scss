@@ -1,0 +1,267 @@
+.modal {
+
+  &-tool {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    z-index: 10;
+
+    @include media-max(1250) {
+      right: 65px;
+    }
+    @include mobile {
+      left: 18px;
+      top: 18px;
+    }
+  }
+
+  &-window {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    background: #010101;
+    transition: all .4s;
+  }
+
+  &-img {
+    min-width: 510px;
+    width: 100%;
+    height: 100%;
+
+    @include mobile {
+      height: 350px;
+      width: 100%;
+      min-width: auto !important;
+    }
+    @include media-max(500) {
+      height: 250px;
+    }
+    @include media-max(400) {
+      height: 222px;
+    }
+
+
+    @include media-max(1250) {
+      min-width: 400px;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+
+      @include mobile {
+        object-fit: cover;
+      }
+
+    }
+  }
+
+  &-content {
+    position: relative;
+    padding: 40px 45px 25px 45px;
+
+    @include media-max(1024) {
+      padding-left: 22px;
+      padding-right: 22px;
+      padding-top: 24px;
+      padding-bottom: 10px;
+    }
+
+  }
+
+
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 100%;
+    min-height: 200px;
+
+    @include media-max(1250) {
+      height: 100%;
+    }
+    @include mobile {
+      flex-direction: column;
+    }
+
+    & .menu-item__text {
+      @include mobile {
+        display: block;
+      }
+    }
+
+    & .menu-item__text__info {
+      @include mobile {
+        height: 250px;
+
+      }
+    }
+
+    & .menu-item__price {
+
+      @include mobile {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13px;
+        letter-spacing: 0.005em;
+        color: #FFFFFF;
+        padding-left: 0;
+
+        @include media-max(340) {
+          padding-left: 0;
+        }
+      }
+    }
+
+    & .menu-item__title.default-text {
+      font-size: 32px;
+      line-height: 31px;
+
+      @include mobile {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    & .menu-item__block-bottom {
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      background: transparent;
+
+      @include media-max(1250) {
+        height: auto;
+      }
+    }
+
+    & .btn-basket {
+      padding: 0 50px;
+      width: max-content;
+
+      @include media-max(1250) {
+        padding: 0 20px;
+        font-weight: 800;
+      }
+      @include mobile {
+        width: 178px;
+        margin-left: -10px;
+      }
+    }
+
+    & .menu-item__block-bottom {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+
+      @include media-max(1250) {
+        bottom: 0;
+      }
+      @include mobile {
+        position: relative;
+        width: 100%;
+      }
+    }
+
+    & .menu-item__block-bottom--wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 89%;
+      padding-bottom: 30px;
+
+      @include mobile {
+        width: 100%;
+        padding-bottom: 0;
+      }
+    }
+
+    & .menu-item__text {
+      font-size: 14px;
+      line-height: 121.7%;
+      opacity: 0.8;
+
+      @include media-max(1024) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  & .product-weight {
+    padding: 12px 0;
+  }
+}
+
+
+.modal-window__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  visibility: visible;
+  max-width: 1145px;
+  height: 547px;
+  width: 100%;
+  transition: all .4s;
+
+  @include media-max(1250) {
+    height: 470px;
+    max-width: none;
+    width: 95%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .show {
+    z-index: 1001;
+  }
+}
+
+@media (max-width: 768px) {
+  .show {
+    height: auto;
+    max-width: none;
+  }
+}
+
+a.modal-close {
+  position: absolute;
+  top: 0;
+  right: -40px;
+
+  @include media-max(1250) {
+    right: 25px;
+    top: 20px;
+  }
+  @include mobile {
+    right: 18px;
+    top: 18px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

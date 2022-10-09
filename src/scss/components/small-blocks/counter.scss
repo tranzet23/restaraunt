@@ -1,0 +1,43 @@
+.number {
+  width: 180px;
+  height: 51px;
+  align-items: center;
+  border-radius: 3px;
+  background: $color-white;
+  display: none;
+
+  @include mobile {
+    width: 80px;
+    height: 23px;
+  }
+}
+
+.minus, .plus {
+  width: 20%;
+  height: 50px;
+  background: transparent;
+  padding: 8px 5px 8px 5px;
+  text-align: center;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.number input {
+  height: 50px;
+  width: 60%;
+  font-size: 26px;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  @include mobile {
+    font-size: 15px;
+  }
+}

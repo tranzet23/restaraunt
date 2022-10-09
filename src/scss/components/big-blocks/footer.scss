@@ -1,0 +1,111 @@
+.footer {
+  background: #0e0e0e;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
+
+  &-logo {
+    @include mobile {
+      order: 1;
+    }
+  }
+
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 90px;
+
+    @include desktop {
+      padding: 0 27px;
+    }
+  @include mobile {
+    flex-direction: column;
+  }
+  }
+
+  &-title {
+    font-family: 'Frutiger Neue LT W1G', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+
+  @include mobile {
+    padding-bottom: 8px;
+  }
+
+
+    &:hover {
+      color: $color-red;
+      transition: all .3s;
+    }
+  }
+
+  &-text {
+    font-family: 'Frutiger Neue LT W1G', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  @include mobile {
+    order: 3;
+  }
+  }
+
+  &-phone {
+    position: relative;
+    display: flex;
+
+    @include mobile {
+      order: 2;
+     margin: 40px 0;
+    }
+
+    svg {
+      position: absolute;
+      margin-top: 5px;
+      left: -15px;
+      top: -5px;
+      color: #fff;
+    }
+
+    &__number {
+      font-family: 'Frutiger Neue LT W1G', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.005em;
+      color: #FFFFFF;
+      margin-left: 15px;
+    }
+
+    &:hover .footer-phone__number {
+      color: $color-red;
+      transition: all .3s;
+    }
+
+    &:hover svg {
+      color: $color-red;
+      transition: all .3s;
+    }
+  }
+}
